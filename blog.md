@@ -70,7 +70,8 @@ git checkout rebase-demo
 **Let's make some bad changes and try to fix them.**
 
 - There is change on `line 12` change and i want to revert that.
-- **HEAD** represents the pointer to last commit. In order to revert it we specify `HEAD~n` where **n stands for number of commits we want to revert**.
+
+**Solution**:- **HEAD** represents the pointer to last commit. In order to revert it we specify `HEAD~n` where **n stands for number of commits we want to revert**.
 
 ```sh
 git reset --hard HEAD~1
@@ -85,6 +86,24 @@ git reset --hard HEAD~1
 ```sh
 git reset --soft HEAD~1
 ```
+
+-**Solution**:- `reset --soft` simply deletes the commit from the commit history and stage the commit which allows us to edit them or fix them.
+
+
+**Scenario**: There are some more changes which needs to be done and they belong to previous commit, instead of adding a new commit or doing **git reset --soft** and then commiting again we can simple `amend` the commit.
+
+- Let's delete line 12 and commit it.
+picture
+
+- But now i want to also delete line 12, ideally it belongs to commit of previous commit because i am doing the same operation of deleting the line.
+
+**Solution**:- Just add them to `staging area` and use `amend` option.
+
+```sh
+git commit --amend
+```
+
+
 
 
 

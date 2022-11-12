@@ -7,6 +7,3 @@ Changes added by another developer for rebase demo
 
 new changes
 to show demo for git pull -r
-lines added by jatin
-
-Changes which has some spelling mistakes.
