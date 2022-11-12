@@ -95,14 +95,21 @@ git reset --soft HEAD~1
 - Let's delete line 12 and commit it.
 picture
 
-- But now i want to also delete line 12, ideally it belongs to commit of previous commit because i am doing the same operation of deleting the line.
+- But now i want to also delete line 10, ideally it belongs to commit of previous commit because i am doing the same operation of deleting the line.
 
 **Solution**:- Just add them to `staging area` and use `amend` option.
 
 ```sh
 git commit --amend
 ```
+- This will add line 10 deletion changes to the line 12 commit by confirmation to change the previous commit message or remain same.
 
+**Scenario**: Youe changes are in remote and now you want to revert them in remote, use `git revert` which creates commit in commit history to undo the previous commit. It uses hash of the commit which is being reversed.
+- Using `git log` copy the hash.
+
+```sh
+git revert 9e1c475e1b676b5af99245ba2bafa5d43a84bac9
+```
 
 
 
