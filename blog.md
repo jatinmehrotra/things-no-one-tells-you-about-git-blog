@@ -70,8 +70,7 @@ git checkout rebase-demo
 **Let's make some bad changes and try to fix them.**
 
 - There is change on `line 12` change and i want to revert that.
-
-**Solution**:- **HEAD** represents the pointer to last commit. In order to revert it we specify `HEAD~n` where **n stands for number of commits we want to revert**.
+- **HEAD** represents the pointer to last commit. In order to revert it we specify `HEAD~n` where **n stands for number of commits we want to revert**.
 
 ```sh
 git reset --hard HEAD~1
