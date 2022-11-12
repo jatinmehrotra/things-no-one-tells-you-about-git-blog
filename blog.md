@@ -19,6 +19,19 @@
 - **Scenario**: You and your teammate is working on the same branch, however he/she pushed their commit changes to remote.
 - You are still working on your local, and when you try to push your changes to remote; you simple can't!
 
+- Here in the branch `rebase-demo` other developer commit their changes first and **as a result we wont be able to push our changes until we pull the changes of remote**.
+
+picture
+
+**A Bad Solution**: Running `git push -f` on your local would definitely solve the issue but it will surely **mess up your commit history** and overwrites other user's commit .
+
+
+**The Better Solution**: Do a **rebase**. It pulls changes from remote and stack our local changes on top of that, **hence avoiding an extra commit and leading to cleaner commit history**.
+
+```sh
+git pull -r
+```
+
 
 
 - **Views**:- It's like a filter. Queries go through the filter -> Aggregator -> Local Index. In the case of the Local index
